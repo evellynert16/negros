@@ -61,6 +61,18 @@ nav a:hover {
     border-radius: 50px 0px 50px 0;
 }
 
+.graficos-container-1{
+    margin: 5rem;
+}
+
+.graficos-container__texto-1{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 2rem;
+    border: var(--cor-secundaria) solid 2px;
+    border-radius: 50px 0px 50px 0;
+}
+
 span{
     font-weight: bold;
     color: var(--cor-secundaria);
