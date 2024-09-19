@@ -29,24 +29,6 @@ h1 {
     font-weight: 700;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--cor-de-fundo);
-    margin: 0 2rem 1rem 0rem;
-    font-size: 1.2 rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    transform: scale(0.90);
-    transition: transform 0.1s;
-}
 
 
 .graficos-container{
