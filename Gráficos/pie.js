@@ -20,7 +20,7 @@ async function redesFavoritasMundo() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Redes sociais que os usuários mais gostam',
+            text: 'Estados do Brasil',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
