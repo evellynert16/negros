@@ -1,45 +1,59 @@
-import { getCSS } from "./common.js"
+import { getCSS, tickConfig } from "./common.js "
 
-async function redesFavoritasMundo() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/redes-favoritas.json'
+async function quantidadeUsuarios() {
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const redes = Object.keys(dados)
-    const valores = Object.values(dados)
-
+    const nomeDasRedes = Object.keys(dados)
+    const quantidadeUsuarios = Object.values(dados)
     const data = [
         {
-            values: valores,
-            labels: redes,
-            type: 'pie',
-            textinfo: 'label+percent'
+            x: nomeDasRedes,
+            y: quantidadeUsuarios,
+            type: 'bar',
+            marker: {
+                color: getCSS('--cor-barra')
+            }
         }
     ]
 
     const layout = {
-        plot_bgcolor: getCSS('--bg-color'),
-        paper_bgcolor: getCSS('--bg-color'),
+        plot_bgcolor: getCSS('--cor-de-fundo'),
+        paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Estados do Brasil',
-            x: 0,
+            text: 'Redes sociais com mais usuários no mundo',
             font: {
-                color: getCSS('--primary-color'),
-                family: getCSS('--font'),
+                color: getCSS('--cor-principal'),
+                family: getCSS('--fonte'),
                 size: 30
             }
         },
-        legend: {
-            font: {
-                color: getCSS('--primary-color'),
-                size: 16
+        xaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Nome das redes sociais',
+                font: {
+                    color: getCSS('--cor-secundaria')
+                }
             }
-        }
-    }
+        },
+        yaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Bilhões de usuários ativos',
+                font: {
+                    color: getCSS('--cor-secundaria')
+                }
+            }
 
+        }
+
+    }
     const grafico = document.createElement('div')
-    grafico.className = 'grafico'
+    grafico.className - 'grafico'
     document.getElementById('graficos-container').appendChild(grafico)
     Plotly.newPlot(grafico, data, layout)
+
 }
 
-redesFavoritasMundo()
+quantidadeUsuarios()
