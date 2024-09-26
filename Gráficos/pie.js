@@ -4,8 +4,8 @@ async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(dados)
-    const quantidadeUsuarios = Object.values(dados)
+    const nomeDasRedes = ['Bahia','Maranhão','Pará','Minas Gerais','Amazonas']
+    const quantidadeUsuarios = ['397502','269168','135603','135315','167']
     const data = [
         {
             x: nomeDasRedes,
@@ -21,7 +21,7 @@ async function quantidadeUsuarios() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Estados do Brasil',
+            text: 'Estados com mais Quilombos no Brasil',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
@@ -31,7 +31,7 @@ async function quantidadeUsuarios() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Estados',
+                text: 'Regiões do Brasil',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
@@ -40,7 +40,7 @@ async function quantidadeUsuarios() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Estados que tem Quilombos',
+                text: 'Quantidades de Quilombos',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
