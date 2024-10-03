@@ -1,4 +1,4 @@
-const url = 'dados.json'
+const url = 'informacoes.json'
 
 async function visualizarInformacoesGlobais() {
     const res = await fetch(url)
