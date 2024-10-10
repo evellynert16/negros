@@ -21,7 +21,7 @@ async function quantidadeUsuarios() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Estados com maior indice de racismo',
+            text: 'Os instrumentos de música mais usados na África.',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
@@ -31,7 +31,7 @@ async function quantidadeUsuarios() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Estados do Brasil',
+                text: 'Instrumentos',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
