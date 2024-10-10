@@ -31,7 +31,7 @@ async function quantidadeUsuarios() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Países',
+                text: 'EStados',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
@@ -40,7 +40,7 @@ async function quantidadeUsuarios() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'porcentagem',
+                text: 'casos a cada 100 mil habitantes.',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
