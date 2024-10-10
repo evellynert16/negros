@@ -21,7 +21,7 @@ async function quantidadeUsuarios() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Países com maior índice de racismo',
+            text: 'Estados do Brasil com maior índice de racismo',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
