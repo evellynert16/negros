@@ -40,7 +40,7 @@ async function quantidadeUsuarios() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'casos a cada 100 mil habitantes',
+                text: 'Instrumentos',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
